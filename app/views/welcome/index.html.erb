@@ -1,0 +1,9 @@
+<h1>Proyecto de Geronimo Vierma para Incisos Comunicaciones Almeida</h1>
+
+<%= link_to 'Mi Blog', controller: 'articles' %> </br> </br>
+
+<%= link_to 'Iniciar de sesión', new_user_session_path, method: :get %> </br> </br>
+
+<% if user_signed_in? %>
+<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+ <%end%>
