@@ -1,12 +1,34 @@
-<h1>Lista de articulos</h1>
-<%= link_to 'Crear un nuevo articulo', new_article_path %> 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
- 
+<!DOCTYPE html>
+<html lang="en">
+
+  
+
+  <body>
+
+    
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Title -->
+          <h1 class="mt-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de Articulos</h1>
+
+          <hr>
+
+          <!-- Post Content -->
+          
+
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Título</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contenido</b>
+    
+  
+<table width="100%" border="5" cellpadding="10" cellspacing="10" bordercolor="#F2F2F2"> 
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td> 
@@ -21,4 +43,96 @@
 
   <% end %>
 </table> </br>
-<%= link_to 'Volver a la pagina principal', welcome_index_path %> 
+
+          
+          <%= link_to 'Crear un nuevo articulo', new_article_path %> </br> </br>
+          <hr>
+
+        
+
+          <!-- Comment with nested comments -->
+          <div class="media mb-4">
+            
+            <div class="media-body">
+              <h5 class="mt-0">Geronimo Vierma</h5>
+              Creador de este Blog
+
+              
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          
+
+          <!-- Categories Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Categorias</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#">Ciencia</a>
+                    </li>
+                    <li>
+                      <a href="#">Tecnologia</a>
+                    </li>
+                    <li>
+                      <a href="#">Deportes</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="#">Programación</a>
+                    </li>
+                    <li>
+                      <a href="#">Video juegos</a>
+                    </li>
+                    <li>
+                      <a href="#">Tutoriales</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Prueba</h5>
+            <div class="card-body">
+              Blog de prueba para Incisos Comunicaciones
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">geronimovierma@hotmail.com</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
